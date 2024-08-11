@@ -12,7 +12,7 @@ RUN apt-get update && \
 WORKDIR /app
 
 # Copy the built JAR file into the container at /app/docker.jar
-COPY target/docker-0.0.1-SNAPSHOT.jar /app/docker.jar
+COPY docker-0.0.1-SNAPSHOT.jar /app/docker.jar
 
 # Expose the port that the application will run on
 EXPOSE 8080
