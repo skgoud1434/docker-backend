@@ -1,0 +1,22 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "Dockerfile",
+        "use": "@vercel/docker"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/"
+      }
+    ],
+    "env": {
+      "SPRING_DATASOURCE_URL": "jdbc:mysql://localhost:3306/sys",
+      "SPRING_DATASOURCE_USERNAME": "root",
+      "SPRING_DATASOURCE_PASSWORD": "root"
+
+    }
+  }
+  
