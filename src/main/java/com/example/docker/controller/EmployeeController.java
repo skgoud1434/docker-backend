@@ -16,7 +16,7 @@ import com.example.docker.model.Employee;
 import com.example.docker.service.EmployeeService;
 
 @RestController
-@RequestMapping("/xto10x")
+@RequestMapping
 @CrossOrigin
 public class EmployeeController {
 

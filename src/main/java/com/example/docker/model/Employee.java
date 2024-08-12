@@ -9,8 +9,9 @@ import jakarta.persistence.Id;
 public class Employee {
 
       @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+     @GeneratedValue(strategy = GenerationType.IDENTITY)
+     private int id;
+
     private String employeeName;
     private String employeeEmail;
     private String managerName;
