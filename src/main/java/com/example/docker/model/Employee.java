@@ -1,13 +1,15 @@
 package com.example.docker.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
 public class Employee {
 
       @Id
-     
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String employeeName;
     private String employeeEmail;
@@ -21,19 +23,14 @@ public class Employee {
     }
 
     
-    public Employee(int id, String employeeName, String employeeEmail, String managerName, String managerEmail) {
-        this.id = id;
+    public Employee(String employeeName, String employeeEmail, String managerName, String managerEmail) {
+    
         this.employeeName = employeeName;
         this.employeeEmail = employeeEmail;
         this.managerName = managerName;
         this.managerEmail = managerEmail;
     }
-    public int getId() {
-        return id;
-    }
-    public void setId(int id) {
-        this.id = id;
-    }
+   
     public String getEmployeeName() {
         return employeeName;
     }
